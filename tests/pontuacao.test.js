@@ -17,3 +17,6 @@ test('respostas null nao somam pontos', () => {
 test('respostas ausentes nao somam pontos', () => {
   assert.equal(calcularPontuacao([], [0, 1, 2]), 0);
 });
+test('respostas parcialmente em branco somam dois pontos', () => {
+  assert.equal(calcularPontuacao([0, null, 2], [0, 1, 2]), 2);
+});
